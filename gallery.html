@@ -1,11 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="el">
 <head>
-    <meta charset="UTF-8">
-    <title>Photo Gallery</title>
+  <meta charset="UTF-8">
+  <title>SmartakiEND Gallery</title>
+  <style>
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      background-color: #222;
+      color: #eee;
+    }
+    h1 {
+      text-align: center;
+      margin: 30px 0 16px;
+      color: #d90429;
+      font-size: 2.3rem;
+      letter-spacing: 2px;
+    }
+    .gallery {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px 17px;
+      justify-content: center;
+    }
+    .gallery img {
+      width: 290px;
+      height: auto;
+      border-radius: 18px;
+      box-shadow: 0 4px 19px #d90429cc;
+      border: 3px solid #d90429;
+      background: #111;
+      margin-bottom: 18px;
+      filter: drop-shadow(0 0 5px #d90429);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .gallery img:hover {
+      border-color: #ff2e4a;
+      box-shadow: 0 8px 27px #ff2e4acc;
+      transform: scale(1.055);
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-    <h1>Smartaki Photo Gallery</h1>
+  <h1>SmartakiEND Photo Gallery</h1>
+  <div class="gallery">
     <img src="images/1.jpg" alt="Photo 1">
     <img src="images/2.jpg" alt="Photo 2">
     <img src="images/3.jpg" alt="Photo 3">
@@ -23,5 +63,6 @@
     <img src="images/91.jpg" alt="Photo 91">
     <img src="images/123.jpg" alt="Photo 123">
     <img src="images/1234.jpg" alt="Photo 1234">
+  </div>
 </body>
 </html>
