@@ -38,35 +38,46 @@
       border: 3px solid #d90429;
       background: #111;
       transition: transform 0.22s, box-shadow 0.22s;
+      cursor: pointer;
     }
     .gallery img:hover {
       border-color: #ff2e4a;
       box-shadow: 0 8px 33px #ff2e4acc;
       transform: scale(1.045);
-      cursor: pointer;
+    }
+    @media (max-width: 600px) {
+      .gallery img {
+        width: 90%;
+        height: auto;
+      }
     }
   </style>
 </head>
 <body>
   <h1>Smartaki Photo Gallery</h1>
   <div class="gallery">
-    <img src="images/1.jpg" alt="1">
-    <img src="images/2.jpg" alt="2">
-    <img src="images/3.jpg" alt="3">
-    <img src="images/4.jpg" alt="4">
-    <img src="images/6.jpg" alt="6">
-    <img src="images/7.jpg" alt="7">
-    <img src="images/8.jpg" alt="8">
-    <img src="images/10.jpg" alt="10">
-    <img src="images/11.jpg" alt="11">
-    <img src="images/12.jpg" alt="12">
-    <img src="images/13.jpg" alt="13">
-    <img src="images/14.jpg" alt="14">
-    <img src="images/15.jpg" alt="15">
-    <img src="images/51.jpg" alt="51">
-    <img src="images/91.jpg" alt="91">
-    <img src="images/123.jpg" alt="123">
-    <img src="images/1234.jpg" alt="1234">
+    <img src="images/1.jpg" alt="1" />
+    <img src="images/2.jpg" alt="2" />
+    <img src="images/3.jpg" alt="3" />
+    <img src="images/4.jpg" alt="4" />
+    <img src="images/6.jpg" alt="6" />
+    <img src="images/7.jpg" alt="7" />
+    <img src="images/8.jpg" alt="8" />
+    <img src="images/10.jpg" alt="10" />
+    <img src="images/11.jpg" alt="11" />
+    <img src="images/12.jpg" alt="12" />
+    <img src="images/13.jpg" alt="13" />
+    <img src="images/14.jpg" alt="14" />
+    <img src="images/15.jpg" alt="15" />
+    <img src="images/51.jpg" alt="51" />
+    <img src="images/91.jpg" alt="91" />
+    <img src="images/123.jpg" alt="123" />
+    <img src="images/1234.jpg" alt="1234" />
+    <img src="images/b-logo-451.jpg" alt="Φωτιζόμενο Σήμα B Smart 451" />
+    <img src="images/b-logo-portbagaz-451.jpg" alt="Φωτιζόμενο Σήμα Πορτ Μπαγκάζ Smart 451" />
+    <img src="images/angel-eyes-451-1.jpg" alt="Angel Eyes Φανάρι 1" />
+    <img src="images/angel-eyes-451-2.jpg" alt="Angel Eyes Φανάρι 2" />
+    <img src="images/angel-eyes-451-3.jpg" alt="Angel Eyes Φανάρι 3" />
   </div>
 </body>
 </html>
