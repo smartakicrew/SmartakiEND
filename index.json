@@ -1,0 +1,9 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-smartaki-products",
+      "settings": {}
+    }
+  },
+  "order": ["main"]
+}

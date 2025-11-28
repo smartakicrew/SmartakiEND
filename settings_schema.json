@@ -1,0 +1,18 @@
+[
+  {
+    "name": "Theme settings",
+    "theme_name": "Smartaki Works",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Smartaki Theme Options"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_animations",
+        "label": "Enable hover animations",
+        "default": true
+      }
+    ]
+  }
+]

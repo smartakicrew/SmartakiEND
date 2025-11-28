@@ -1,0 +1,514 @@
+{% schema %}
+{
+  "name": "Smartaki Products",
+  "settings": [],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Smartaki Products"
+    }
+  ]
+}
+{% endschema %}
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet" />
+
+<style>
+  .smartaki-products {
+    font-family: 'Montserrat', Arial, sans-serif;
+  }
+  
+  .smartaki-products body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background-color: #000;
+    margin: 0;
+    color: #eee;
+  }
+  
+  .smartaki-products header {
+    background: linear-gradient(90deg, #111 70%, #d90429 100%);
+    color: #fff;
+    padding: 24px 0 16px 0;
+    text-align: center;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 2.5rem;
+    border-bottom: 3px solid #d90429;
+  }
+  
+  .smartaki-products header p {
+    color: #ffccd5;
+    font-size: 1.05rem;
+    margin-top: 6px;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .smartaki-products .wellbeing-bar {
+    background: linear-gradient(90deg, #d90429, #6a040f 80%);
+    color: #fff;
+    text-align: center;
+    padding: 11px 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-shadow: 0 0 7px #d90429;
+  }
+  
+  .smartaki-products .container {
+    max-width: 1050px;
+    margin: auto;
+    padding: 20px 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px 18px;
+    justify-content: center;
+  }
+  
+  .smartaki-products .item {
+    background: #111;
+    border-radius: 16px;
+    box-shadow: 0 4px 13px #d90429cc;
+    width: 288px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 3px solid #d90429;
+  }
+  
+  .smartaki-products .item:hover {
+    border-color: #ff2e4a;
+    box-shadow: 0 8px 27px #ff2e4acc;
+    transform: translateY(-7px) scale(1.045);
+    cursor: pointer;
+  }
+  
+  .smartaki-products .imgbox {
+    width: 89%;
+    margin-top: 14px;
+    margin-bottom: 12px;
+    height: 198px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #222;
+    border-radius: 14px;
+    box-shadow: 0 0 12px #d90429aa inset;
+  }
+  
+  .smartaki-products .imgbox img {
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    border: 2px solid #d90429;
+    background: #000;
+    transition: box-shadow 0.3s;
+    filter: drop-shadow(0 0 5px #d90429);
+  }
+  
+  .smartaki-products .item h2 {
+    font-size: 1.05rem;
+    font-weight: 900;
+    text-align: center;
+    color: #ff2e4a;
+    margin: 9px 6px 4px 6px;
+    min-height: 40px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 3px #90020d;
+  }
+  
+  .smartaki-products .desc {
+    font-size: 0.97rem;
+    margin: 0 8px 12px 8px;
+    text-align: center;
+    color: #ccc;
+    font-weight: 500;
+    font-style: italic;
+    min-height: 48px;
+  }
+  
+  .smartaki-products .price {
+    font-size: 1.09rem;
+    color: #d90429;
+    font-weight: 900;
+    padding: 7px 26px;
+    margin-bottom: 13px;
+    border-radius: 11px;
+    background: #220000;
+    box-shadow: 0 0 11px #d90429cc;
+    letter-spacing: 0.07em;
+    user-select: none;
+    text-transform: uppercase;
+  }
+  
+  .smartaki-products .buy-btn {
+    background: #d90429;
+    color: #fff;
+    font-size: 0.99rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 30px;
+    cursor: pointer;
+    margin-bottom: 17px;
+    box-shadow: 0 0 16px #ff2e4a;
+    transition: background 0.22s, box-shadow 0.22s;
+    text-transform: uppercase;
+  }
+  
+  .smartaki-products .buy-btn:hover {
+    background: #ff2e4a;
+    box-shadow: 0 0 23px #ff4a5c;
+    color: #fff;
+  }
+  
+  .smartaki-products footer {
+    margin-top: 45px;
+    padding: 14px 0 12px 0;
+    background: #111;
+    color: #ff2e4a;
+    text-align: center;
+    font-size: 1.1rem;
+    letter-spacing: 0.12em;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-top: 3px solid #d90429;
+    user-select: none;
+  }
+  
+  .smartaki-products footer div a {
+    margin: 0 12px;
+    font-weight: 800;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.35s;
+    color: #ff2e4a;
+    text-shadow: 0 0 8px #ff2e4aaa;
+  }
+  
+  .smartaki-products footer div a:hover {
+    color: #fff;
+    text-shadow: 0 0 14px #ff4a5c;
+  }
+  
+  /* Carousel Styles */
+  .smartaki-products .imgbox.carousel-container {
+    position: relative;
+  }
+  
+  .smartaki-products .imgbox #angel-eyes-carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+  }
+  
+  .smartaki-products .imgbox #angel-eyes-carousel img {
+    min-width: 100%;
+    height: 198px;
+    object-fit: contain;
+    border-radius: 12px;
+    border: 2px solid #d90429;
+    filter: drop-shadow(0 0 5px #d90429);
+  }
+  
+  .smartaki-products .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(217,4,41,0.8);
+    color: #fff;
+    border: none;
+    padding: 10px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+    z-index: 10;
+    transition: background 0.3s;
+  }
+  
+  .smartaki-products .carousel-btn.left { left: 8px; }
+  .smartaki-products .carousel-btn.right { right: 8px; }
+  
+  .smartaki-products .carousel-btn:hover {
+    background: rgba(255,46,74,0.9);
+  }
+  
+  @media (max-width: 768px) {
+    .smartaki-products .container {
+      gap: 20px 12px;
+    }
+    
+    .smartaki-products .item {
+      width: 95%;
+      max-width: 320px;
+    }
+  }
+</style>
+
+<section class="smartaki-products">
+  <header>
+    <h1>Smartaki Works</h1>
+    <p>Ποιότητα, στυλ και ασφάλεια - Smart 451 Parts & Brabus Look</p>
+  </header>
+  
+  <div class="wellbeing-bar">
+    Επένδυσε στην ευεξία και την ασφάλεια του αυτοκινήτου σου — γιατί αξίζεις το καλύτερο.
+  </div>
+  
+  <main>
+    <div class="container">
+      <div class="item">
+        <div class="imgbox">
+          {{ '10.jpg' | asset_img_url: '300x' | img_tag: 'Ποτηροθήκη 2/3 Θέσεων Smart 451' }}
+        </div>
+        <h2>Ποτηροθήκη 2/3 Θέσεων Smart 451</h2>
+        <div class="desc">Πρακτική ποτηροθήκη 2/3 θέσεων για Smart 451. Ανθεκτική και καλαίσθητη.</div>
+        <div class="price">35,00 €</div>
+        <button class="buy-btn" onclick="addToCart('Ποτηροθήκη 2/3 Θέσεων', 35)">Αγορά τώρα</button>
+      </div>
+
+      <div class="item">
+        <div class="imgbox">
+          {{ '2.jpg' | asset_img_url: '300x' | img_tag: 'Αλουμινένιο Πετάλ Φρένου / Γκαζιού' }}
+        </div>
+        <h2>Αλουμινένιο Πετάλ Φρένου / Γκαζιού</h2>
+        <div class="desc">Αλουμινένια πετάλ φρένου και γκαζιού, sport στυλ και κορυφαία πρόσφυση.</div>
+        <div class="price">55,00 €</div>
+        <button class="buy-btn" onclick="addToCart('Αλουμινένιο Πετάλ', 55)">Αγορά τώρα</button>
+      </div>
+
+      <div class="item">
+        <div class="imgbox">
+          {{ '91.jpg' | asset_img_url: '300x' | img_tag: 'Φώτα LED Πινακίδας Smart 451' }}
+        </div>
+        <h2>Φώτα LED Πινακίδας Smart 451</h2>
+        <div class="desc">Λευκό φως υψηλής έντασης, σετ φώτων LED πινακίδας κυκλοφορίας για Smart 451.</div>
+        <div class="price">22,00 €</div>
+        <button class="buy-btn" onclick="addToCart('Φώτα LED Πινακίδας', 22)">Αγορά τώρα</button>
+      </div>
+
+      <div class="item">
+        <div class="imgbox">
+          {{ '1.jpg' | asset_img_url: '300x' | img_tag: 'Shifting Paddles Τιμονιού Smart 451' }}
+        </div>
+        <h2>Shifting Paddles Τιμονιού Smart 451</h2>
+        <div class="desc">Αλουμινένια paddles αλλαγής ταχυτήτων για Smart 451. Βελτιωμένη αίσθηση και σπορ εμφάνιση.</div>
+        <div class="price">40,00 €</div>
+        <button class="buy-btn" onclick="addToCart('Shifting Paddles', 40)">Αγορά τώρα</button>
+      </div>
+
+      <div class="item">
+        <div class="imgbox">
+          {{ '13.jpg' | asset_img_url: '300x' | img_tag: 'Κλέφτες Ζώνης Smart 451' }}
+        </div>
+        <h2>Κλέφτες Ζώνης Smart 451</h2>
+        <div class="desc">Πρακτικοί αποστάτες για ζώνες Smart 451. Εύχρηστοι και ανθεκτικοί.</div>
+        <div class="price">15,00 €</div>
+        <button class="buy-btn" onclick="addToCart('Κλέφτες Ζώνης', 15)">Αγορά τώρα</button>
+      </div>
+
+      <div class="item">
+        <div class="imgbox">
+          {{ '7.jpg' | asset_img_url: '300x' | img_tag: 'Καπάκι Καρφί Οπίσθιου Προφυλακτήρα' }}
+        </div>
+        <h2>Καπάκι / Καρφί Οπίσθιου Προφυλακτήρα(2 τεμάχια)</h2>
+        <div class="desc">Καπάκια για πίσω προφυλακτήρα Smart 451. Εύκολη αντικατάσταση.</div>
+        <div class="price">20,00 €</div>
+        <button class="buy-btn" onclick="addToCart('Καπάκι Προφυλακτήρα', 20)">Αγορά τώρα</button>
+      </div>
+
+      <div class="item">
+        <div class="imgbox">
+          {{ '3.jpg' | asset_img_url: '300x' | img_tag: 'Dynamic Flash Φιμέ Καθαρά (Plug & Play)' }}
+        </div>
+        <h2>Dynamic Flash Φιμέ Καθαρά (Plug & Play)</h2>
+        <div class="desc">Δυναμικά φλας φιμέ για Smart 451. Plug & Play εγκατάσταση, υψηλή ποιότητα.</div>
+        <div class="price">25,00 €</div>
+        <button class="buy-btn" onclick="addToCart('Dynamic Flash', 25)">Αγορά τώρα</button>
+      </div>
+
+      <div class="item">
+        <div class="imgbox">
+          {{ '51.jpg' | asset_img_url: '300x' | img_tag: 'Μπουτόν Πορτ Μπαγκάζ Smart 451' }}
+        </div>
+        <h2>Μπουτόν Πορτ Μπαγκάζ Smart 451</h2>
+        <div class="desc">Ανταλλακτικό μπουτόν πορτ μπαγκάζ (Plug & Play). Ανθεκτικό και αξιόπιστο.</div>
+        <div class="price">40,00 €</div>
+        <button class="buy-btn" onclick="addToCart('Μπουτόν Πορτ Μπαγκάζ', 40)">Αγορά τώρα</button>
+      </div>
+
+      <div class="item">
+        <div class="imgbox">
+          {{ '11.jpg' | asset_img_url: '300x' | img_tag: 'Μπροστινά Κλείστρα Καπό Facelift Smart 451' }}
+        </div>
+        <h2>Μπροστινά Κλείστρα Καπό Facelift Smart 451</h2>
+        <div class="desc">Σετ μπροστινών κλείστρων για καπό Facelift Smart 451. Ανθεκτικά και ποιοτικά.</div>
+        <div class="price">32,00 €</div>
+        <button class="buy-btn" onclick="addToCart('Κλείστρα Καπό', 32)">Αγορά τώρα</button>
+      </div>
+
+      <div class="item">
+        <div class="imgbox">
+          {{ '14.jpg' | asset_img_url: '300x' | img_tag: 'Πόμολο Λεβιέ Ταχυτήτων Smart 451' }}
+        </div>
+        <h2>Πόμολο-Λεβιέ Ταχυτήτων Smart 451</h2>
+        <div class="desc">Σπορ πόμολο-λεβιέ ταχυτήτων για Smart 451 — υψηλής ποιότητας και άνεσης.</div>
+        <div class="price">30,00 €</div>
+        <button class="buy-btn" onclick="addToCart('Πόμολο Ταχυτήτων', 30)">Αγορά τώρα</button>
+      </div>
+
+      <div class="item">
+        <div class="imgbox">
+          {{ '1234.jpg' | asset_img_url: '300x' | img_tag: 'Τρίτο Στοπ Smart 451' }}
+        </div>
+        <h2>Τρίτο Στοπ LED Smart 451</h2>
+        <div class="desc">Ανταλλακτικό τρίτο φως STOP υψηλής φωτεινότητας για απόλυτη ασφάλεια και χαρακτηριστικό look Brabus.</div>
+        <div class="price">110,00 €</div>
+        <button class="buy-btn" onclick="addToCart('Τρίτο Στοπ LED', 110)">Αγορά τώρα</button>
+      </div>
+
+      <div class="item">
+        <div class="imgbox">
+          {{ '15.jpg' | asset_img_url: '300x' | img_tag: 'Σιλικονούχο Κάλυμμα Χειροφρένου Smart 451' }}
+        </div>
+        <h2>Σιλικονούχο Κάλυμμα Χειροφρένου Smart 451</h2>
+        <div class="desc">Κάλυμμα χειροφρένου από σιλικόνη. Αντιολισθητικό, άνετο και κομψό.</div>
+        <div class="price">12,00 €</div>
+        <button class="buy-btn" onclick="addToCart('Κάλυμμα Χειροφρένου', 12)">Αγορά τώρα</button>
+      </div>
+
+      <div class="item">
+        <div class="imgbox">
+          {{ '4.jpg' | asset_img_url: '300x' | img_tag: 'Προβολείς Ομίχλης LED Smart 451' }}
+        </div>
+        <h2>Προβολείς Ομίχλης LED Smart 451</h2>
+        <div class="desc">Ισχυρός ψυχρός φωτισμός για άριστη ορατότητα στο δρόμο. Σετ με λάμπες LED.</div>
+        <div class="price">85,00 €</div>
+        <button class="buy-btn" onclick="addToCart('Προβολείς Ομίχλης', 85)">Αγορά τώρα</button>
+      </div>
+
+      <div class="item">
+        <div class="imgbox">
+          {{ '12.jpg' | asset_img_url: '300x' | img_tag: 'Εσωτερικές Κόπιτσες Μασπιέδων Smart 451' }}
+        </div>
+        <h2>Εσωτερικές Κόπιτσες Μασπιέδων Smart 451 (5 τεμάχια)</h2>
+        <div class="desc">Σετ εσωτερικών κόπιτσων για μασπιέδες Smart 451 — άψογη εφαρμογή.</div>
+        <div class="price">5,00 €</div>
+        <button class="buy-btn" onclick="addToCart('Κόπιτσες Μασπιέδων', 5)">Αγορά τώρα</button>
+      </div>
+
+      <div class="item">
+        <div class="imgbox">
+          {{ '6.jpg' | asset_img_url: '300x' | img_tag: 'Μεμβράνες Κοντέρ Brabus Μαύρες (160km/h)' }}
+        </div>
+        <h2>Μεμβράνες Κοντέρ Brabus Μαύρες (160km/h)</h2>
+        <div class="desc">Μαύρες μεμβράνες Brabus για κοντέρ και οργανάκια Smart 451 (160km/h). Premium εμφάνιση.</div>
+        <div class="price">80,00 €</div>
+        <button class="buy-btn" onclick="addToCart('Μεμβράνες Κοντέρ', 80)">Αγορά τώρα</button>
+      </div>
+
+      <div class="item">
+        <div class="imgbox">
+          {{ '8.jpg' | asset_img_url: '300x' | img_tag: 'Έξτρα Χερούλι Πορτ Μπαγκάζ Smart 451' }}
+        </div>
+        <h2>Έξτρα Χερούλι Πορτ Μπαγκάζ Smart 451</h2>
+        <div class="desc">Πρακτικό έξτρα χερούλι για πορτ μπαγκάζ Smart 451. Εύκολη τοποθέτηση, ανθεκτική κατασκευή.</div>
+        <div class="price">12,00 €</div>
+        <button class="buy-btn" onclick="addToCart('Χερούλι Πορτ Μπαγκάζ', 12)">Αγορά τώρα</button>
+      </div>
+
+      <div class="item">
+        <div class="imgbox">
+          {{ '123.jpg' | asset_img_url: '300x' | img_tag: 'Τιμόνι F1 BRABUS' }}
+        </div>
+        <h2>Τιμόνι F1 BRABUS flat bottom από ανθρακόνημα</h2>
+        <div class="desc">Τιμόνι από ανθρακόνημα F1 flat bottom με antislip grip, ένδειξη BRABUS, κοντέρ LED και shift light.</div>
+        <div class="price">750,00 €</div>
+        <button class="buy-btn" onclick="addToCart('Τιμόνι F1 BRABUS', 750)">Αγορά τώρα</button>
+      </div>
+
+      <div class="item">
+        <div class="imgbox">
+          {{ 'b-logo-451.jpeg' | asset_img_url: '300x' | img_tag: 'Φωτιζόμενο Σήμα B Smart 451' }}
+        </div>
+        <h2>Φωτιζόμενο Σήμα B Smart 451</h2>
+        <div class="desc">Φωτιζόμενο σήμα B για Smart 451, διαθέσιμο σε όποιο χρώμα LED επιθυμείτε για μοναδικό Brabus look.</div>
+        <div class="price">60,00 €</div>
+        <button class="buy-btn" onclick="addToCart('Σήμα B LED', 60)">Αγορά τώρα</button>
+      </div>
+
+      <div class="item">
+        <div class="imgbox">
+          {{ 'b-logo-portbagaz-451.jpeg' | asset_img_url: '300x' | img_tag: 'Φωτιζόμενο Σήμα Πορτ Μπαγκάζ Smart 451' }}
+        </div>
+        <h2>Φωτιζόμενο Σήμα Πορτ Μπαγκάζ Smart 451</h2>
+        <div class="desc">Φωτιζόμενο σήμα πορτ μπαγκάζ Smart 451 με πολλαπλά LED για έντονη φωτεινότητα και premium εμφάνιση.</div>
+        <div class="price">60,00 €</div>
+        <button class="buy-btn" onclick="addToCart('Σήμα Πορτ Μπαγκάζ', 60)">Αγορά τώρα</button>
+      </div>
+
+      <div class="item">
+        <div class="imgbox carousel-container">
+          <div id="angel-eyes-carousel">
+            {{ 'angel-eyes-451-1.jpeg' | asset_img_url: '300x' | img_tag: 'Angel Eyes Φανάρι 1', 'data-slide': '0' }}
+            {{ 'angel-eyes-451-2.jpeg' | asset_img_url: '300x' | img_tag: 'Angel Eyes Φανάρι 2', 'data-slide': '1' }}
+            {{ 'angel-eyes-451-3.jpeg' | asset_img_url: '300x' | img_tag: 'Angel Eyes Φανάρι 3', 'data-slide': '2' }}
+          </div>
+          <button class="carousel-btn left" onclick="slideLeft('angel-eyes-carousel')">❮</button>
+          <button class="carousel-btn right" onclick="slideRight('angel-eyes-carousel')">❯</button>
+        </div>
+        <h2>Κατασκευή Φαναριών Angel Eyes(Ψυχρό Λευκό)</h2>
+        <div class="desc">Κατασκευή φαναριών τύπου angel eyes με ενσωματωμένα φλάς και δυνατότητα χάραξης προτζέκτορα για μοναδικό custom Brabus look.</div>
+        <div class="price">Ρωτήστε για τιμή</div>
+        <button class="buy-btn" onclick="addToCart('Angel Eyes Φανάρια', 'custom')">Αγορά τώρα</button>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    © 2025 Smartaki Works | Designed for Wellbeing & Performance. Εξυπηρέτηση που εμπνέει εμπιστοσύνη.
+    <div>
+      <a href="https://www.instagram.com/smartakiworks/" target="_blank">Instagram</a>
+      <a href="https://www.facebook.com/profile.php?id=61583462499752" target="_blank">Facebook</a>
+      <a href="https://www.tiktok.com/@smartakiworks" target="_blank">TikTok</a>
+    </div>
+  </footer>
+</section>
+
+<script>
+  let carouselPosition = {};
+
+  function slideLeft(carouselId) {
+    const carousel = document.getElementById(carouselId);
+    if (!carouselPosition[carouselId]) carouselPosition[carouselId] = 0;
+    carouselPosition[carouselId]++;
+    if (carouselPosition[carouselId] > 2) carouselPosition[carouselId] = 0;
+    carousel.style.transform = `translateX(-${carouselPosition[carouselId] * 100}%)`;
+  }
+
+  function slideRight(carouselId) {
+    const carousel = document.getElementById(carouselId);
+    if (!carouselPosition[carouselId]) carouselPosition[carouselId] = 0;
+    carouselPosition[carouselId]--;
+    if (carouselPosition[carouselId] < 0) carouselPosition[carouselId] = 2;
+    carousel.style.transform = `translateX(-${carouselPosition[carouselId] * 100}%)`;
+  }
+
+  function addToCart(productName, price) {
+    // Shopify Cart API - θα το συνδέσεις με τα products σου
+    alert(`${productName} (${price}€) προστέθηκε στο καλάθι!`);
+    // Εδώ θα βάλεις το Shopify AJAX Cart API
+    // fetch('/cart/add.js', { method: 'POST', ... })
+  }
+</script>

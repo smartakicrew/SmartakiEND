@@ -1,0 +1,97 @@
+{% schema %}
+{
+  "name": "Smartaki Gallery",
+  "tag": "section",
+  "class": "section smartaki-gallery",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Smartaki Gallery"
+    }
+  ]
+}
+{% endschema %}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:700,400&display=swap" rel="stylesheet">
+
+<style>
+  .smartaki-gallery-wrapper {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background-color: #000;
+    margin: 0;
+    color: #eee;
+    padding-bottom: 40px;
+  }
+
+  .smartaki-gallery-wrapper h1 {
+    text-align: center;
+    margin-top: 36px;
+    color: #ff2e4a;
+    font-size: 2.2rem;
+    letter-spacing: 1.5px;
+    text-shadow: 0 0 10px #d90429;
+  }
+
+  .smartaki-gallery-wrapper .gallery {
+    max-width: 1150px;
+    margin: 42px auto 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 27px 18px;
+    justify-content: center;
+  }
+
+  .smartaki-gallery-wrapper .gallery img {
+    width: 265px;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 16px;
+    box-shadow: 0 4px 17px #d90429cc;
+    border: 3px solid #d90429;
+    background: #111;
+    transition: transform 0.22s, box-shadow 0.22s;
+    cursor: pointer;
+  }
+
+  .smartaki-gallery-wrapper .gallery img:hover {
+    border-color: #ff2e4a;
+    box-shadow: 0 8px 33px #ff2e4acc;
+    transform: scale(1.045);
+  }
+
+  @media (max-width: 600px) {
+    .smartaki-gallery-wrapper .gallery img {
+      width: 90%;
+      height: auto;
+    }
+  }
+</style>
+
+<section class="smartaki-gallery-wrapper">
+  <h1>Smartaki Photo Gallery</h1>
+  <div class="gallery">
+    {{ '1.jpg'   | asset_img_url: '600x' | img_tag: 'Smartaki gallery 1' }}
+    {{ '2.jpg'   | asset_img_url: '600x' | img_tag: 'Smartaki gallery 2' }}
+    {{ '3.jpg'   | asset_img_url: '600x' | img_tag: 'Smartaki gallery 3' }}
+    {{ '4.jpg'   | asset_img_url: '600x' | img_tag: 'Smartaki gallery 4' }}
+    {{ '6.jpg'   | asset_img_url: '600x' | img_tag: 'Smartaki gallery 6' }}
+    {{ '7.jpg'   | asset_img_url: '600x' | img_tag: 'Smartaki gallery 7' }}
+    {{ '8.jpg'   | asset_img_url: '600x' | img_tag: 'Smartaki gallery 8' }}
+    {{ '10.jpg'  | asset_img_url: '600x' | img_tag: 'Smartaki gallery 10' }}
+    {{ '11.jpg'  | asset_img_url: '600x' | img_tag: 'Smartaki gallery 11' }}
+    {{ '12.jpg'  | asset_img_url: '600x' | img_tag: 'Smartaki gallery 12' }}
+    {{ '13.jpg'  | asset_img_url: '600x' | img_tag: 'Smartaki gallery 13' }}
+    {{ '14.jpg'  | asset_img_url: '600x' | img_tag: 'Smartaki gallery 14' }}
+    {{ '15.jpg'  | asset_img_url: '600x' | img_tag: 'Smartaki gallery 15' }}
+    {{ '51.jpg'  | asset_img_url: '600x' | img_tag: 'Smartaki gallery 51' }}
+    {{ '91.jpg'  | asset_img_url: '600x' | img_tag: 'Smartaki gallery 91' }}
+    {{ '123.jpg' | asset_img_url: '600x' | img_tag: 'Smartaki gallery 123' }}
+    {{ '1234.jpg'| asset_img_url: '600x' | img_tag: 'Smartaki gallery 1234' }}
+    {{ 'b-logo-451.jpg'          | asset_img_url: '600x' | img_tag: 'Φωτιζόμενο Σήμα B Smart 451' }}
+    {{ 'b-logo-portbagaz-451.jpg'| asset_img_url: '600x' | img_tag: 'Φωτιζόμενο Σήμα Πορτ Μπαγκάζ Smart 451' }}
+    {{ 'angel-eyes-451-1.jpg'    | asset_img_url: '600x' | img_tag: 'Angel Eyes Φανάρι 1' }}
+    {{ 'angel-eyes-451-2.jpg'    | asset_img_url: '600x' | img_tag: 'Angel Eyes Φανάρι 2' }}
+    {{ 'angel-eyes-451-3.jpg'    | asset_img_url: '600x' | img_tag: 'Angel Eyes Φανάρι 3' }}
+  </div>
+</section>
